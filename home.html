@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230411015433">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- https://youtu.be/zs1r8yafTE8 -->
+		<!-- Адаптивное меню бургер с выпадающим подменю, а так же при помощи JS выбирает режим отбражения PC или Mobile -->
+		<!-- Так же навигация "Раздел-1" "Раздел-2" "Раздел-3" - это навигация по странице с плавным скроллом -->
+		<!-- Посмотреть пример на codePen https://codepen.io/web22des/pen/ZEMJNrB -->
+		<!-- Не работает с основными функциями шаблона ( функция flsFunctions.addTouchClass(); - должна быть выключена) -->
+		<!-- Также в основную страницу (home.html) в блоки, на которые привязана навигация нужно указать классы, закоментированный пример HTML-разметки внизу -->
+		<!-- Подключить стили -->
+		<!-- файл _header-burger.htm подключить в HTML файл home.html  @include('html/my-html/_header-burger.htm',{})  -->
+		<!-- файл header-burger.scss раскоментировать в файле общих стилей common.scss -->
+		<!-- файл header-burger.js раскоментировать в файле скриптов script.js -->
+
+		<header class="header">
+			<div class="contact__container">
+				<div class="contact__inner">
+					<a class="header__logo" href=""><picture><source srcset="img/logo.webp" type="image/webp"><img class="header__logo-img" src="img/logo.png" alt=""></picture></a>
+					<!-- <img class="contact__phone-img" src="img/Icons/fhone.svg" alt=""> -->
+					<div class="contact__phone-inner">
+						<a class="contact__phone" href="tel:+79998887766">+7(999)888-77-66</a>
+					</div>
+
+					<ul class="contact__list">
+						<li class="contact__item"><a class="contact__link" href=""><img class="contact__icon contact__icon--vk" src="img/Icons/tg.svg" alt=""></a></li>
+						<li class="contact__item"><a class="contact__link" href=""><img class="contact__icon contact__icon--tg" src="img/Icons/vk.svg" alt=""></a></li>
+						<li class="contact__item"><a class="contact__link" href=""><img class="contact__icon contact__icon--wts" src="img/Icons/whatsapp.svg" alt=""></a></li>
+
+					</ul>
+
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+			<div class="header__container">
+				<div class="header__menu menu">
+					<!-- <button type="button" class="menu__icon icon-menu"><span></span></button> -->
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a data-goto=".page__section--1" href="#" class="menu__link">Главная</a></li>
+							<li><a data-goto=".page__section--2" href="#" class="menu__link">Категория-1</a></li>
+							<li><a data-goto=".page__section--2" href="#" class="menu__link">Категория-2</a></li>
+							<li><a data-goto=".page__section--2" href="#" class="menu__link">Категория-3</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">О нас</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">Доставка</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">Контакты</a></li>
+							<!-- 					<li><a href="#" class="menu__link">Страница-1</a>
+						<span class="menu__arrow"></span>
+						<ul class="menu__sub-list">
+							<li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+							<li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+							<li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="menu__link">Страница-2</a></li> -->
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- =============== -->
+		<!-- <style>
+	.page__section {height: 50vh; margin-top: 80px;}
+	.page__section--1 {background-color: #794f45;}
+	.page__section--2 {background-color: #77608d;}
+	.page__section--3 {background-color: #7A956B;}
+	.page__title {font-size: 30px; text-align: center;}
+</style>
+
+<div class="page__container">
+	<section class="page__section page__section--1">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+	<section class="page__section page__section--2">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+	<section class="page__section page__section--3">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+</div> -->
+		<!-- =============== -->
+
+
+
+
+
+
+		<main class="page">
+			<section class="top">
+				<!-- Оболочка слайдера -->
+				<div class="top__slider swiper">
+					<!-- Двигающееся часть слайдера -->
+					<div class="top__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="top__slide swiper-slide">
+							<picture><source srcset="img/content/header-bg.webp" type="image/webp"><img class="top__slide-img" src="img/content/header-bg.jpg" alt=""></picture>
+							<h2 class="gen__title">Торты и конфеты на заказ</h2>
+						</div>
+						<!-- Слайд -->
+						<div class="top__slide swiper-slide">
+							<picture><source srcset="img/content/header-bg-2.webp" type="image/webp"><img class="top__slide-img" src="img/content/header-bg-2.jpg" alt=""></picture>
+							<h2 class="gen__title">2 Lorem ipsum dolor sit, amet consectetur adipisicing.</h2>
+						</div>
+						<!-- Слайд -->
+						<div class="top__slide swiper-slide">
+							<picture><source srcset="img/content/header-bg-3.webp" type="image/webp"><img class="top__slide-img" src="img/content/header-bg-3.jpg" alt=""></picture>
+							<h2 class="gen__title">1 Lorem ipsum dolor sit, amet consectetur adipisicing.</h2>
+						</div>
+					</div>
+					<!-- Если нужна пагинация -->
+					<div class="swiper-pagination"></div>
+					<!-- Если нужна навигация (влево/вправо) -->
+					<!-- 		<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button> -->
+					<!-- Если нужен скролбар -->
+					<!-- <div class="swiper-scrollbar"></div> -->
+				</div>
+			</section>
+			<div class="info-more">
+				<div class="info-more__container">
+					<p class="info-more__title">О нас</p>
+					<div class="info-more__inner">
+						<div class="info-more__images">
+							<picture><source srcset="img/content/autor.webp" type="image/webp"><img class="info-more__img" src="img/content/autor.jpg" alt=""></picture>
+						</div>
+						<div class="info-more__content" id="style-4"><!--  force-overflow -->
+							<p class="info-more__text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+							<p class="info-more__text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="info-more info-more__rotate">
+				<div class="info-more__container">
+					<p class="info-more__title">Наши товары</p>
+					<div class="info-more__inner info-more__inner--rotate">
+						<div class="info-more__images">
+							<picture><source srcset="img/content/product.webp" type="image/webp"><img class="info-more__img" src="img/content/product.jpg" alt=""></picture>
+						</div>
+						<div class="info-more__content " id="style-4"><!-- force-overflow -->
+							<p class="info-more__text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+							<p class="info-more__text">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+							<p class="info-more__text">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product">
+				<p class="general-title-two">Авторские работы</p>
+				<div class="slider-product__container">
+					<!-- Оболочка слайдера -->
+					<div class="slider-product__slider swiper-two">
+						<!-- Двигающееся часть слайдера -->
+						<div class="slider-product__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="slider-product__slide swiper-slide">
+								<a class="slider-product__link" href="">
+									<div class="slider-product__inner">
+										<h2 class="slider-product__title">Эксклюзивный товар - 1</h2>
+										<picture><source srcset="img/content/slider-home/1.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/1.jpg" alt=""></picture>
+									</div>
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="slider-product__slide swiper-slide">
+								<a class="slider-product__link" href="">
+									<div class="slider-product__inner">
+										<h2 class="slider-product__title">Эксклюзивный товар - 2</h2>
+										<picture><source srcset="img/content/slider-home/2.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/2.jpg" alt=""></picture>
+									</div>
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="slider-product__slide swiper-slide">
+								<a class="slider-product__link" href="">
+									<div class="slider-product__inner">
+										<h2 class="slider-product__title">Эксклюзивный товар - 3</h2>
+										<picture><source srcset="img/content/slider-home/3.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/3.jpg" alt=""></picture>
+									</div>
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="slider-product__slide swiper-slide">
+								<a class="slider-product__link" href="">
+									<div class="slider-product__inner">
+										<h2 class="slider-product__title">Эксклюзивный товар - 4</h2>
+										<picture><source srcset="img/content/slider-home/4.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/4.jpg" alt=""></picture>
+									</div>
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="slider-product__slide swiper-slide">
+								<a class="slider-product__link" href="">
+									<div class="slider-product__inner">
+										<h2 class="slider-product__title">Эксклюзивный товар - 5</h2>
+										<picture><source srcset="img/content/slider-home/5.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/5.jpg" alt=""></picture>
+									</div>
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="slider-product__slide swiper-slide">
+								<a class="slider-product__link" href="">
+									<div class="slider-product__inner">
+										<h2 class="slider-product__title">Эксклюзивный товар - 6</h2>
+										<picture><source srcset="img/content/slider-home/6.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/6.jpg" alt=""></picture>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- Если нужна пагинация -->
+						<div class="swiper-pagination"></div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<!-- <button type="button" class="swiper-button-prev"></button>
+							<button type="button" class="swiper-button-next"></button> -->
+						<!-- Если нужен скролбар -->
+						<!-- <div class="swiper-scrollbar"></div> -->
+					</div>
+				</div>
+			</div>
+			<section class="benefits">
+				<h2 class="general-title-two">Наши преимущества</h2>
+				<div class="benefits__container">
+					<div class="benefits__card">
+						<div class="benefits__card-body">
+							<picture><source srcset="img/content/benefits/1.webp" type="image/webp"><img class="benefits__card-img" src="img/content/benefits/1.png" alt=""></picture>
+						</div>
+						<div class="benefits__card-footer">
+							<p class="benefits__card-title">Мы используем только натуральные продукты</p>
+							<p class="benefits__card-text">Пояснение к описанию - 1</p>
+						</div>
+					</div>
+					<div class="benefits__card">
+						<div class="benefits__card-body">
+							<picture><source srcset="img/content/benefits/2.webp" type="image/webp"><img class="benefits__card-img" src="img/content/benefits/2.png" alt=""></picture>
+						</div>
+						<div class="benefits__card-footer">
+							<p class="benefits__card-title">Наши изделия всегда свежие</p>
+							<p class="benefits__card-text">Пояснение к описанию - 1</p>
+						</div>
+					</div>
+					<div class="benefits__card">
+						<div class="benefits__card-body">
+							<picture><source srcset="img/content/benefits/3.webp" type="image/webp"><img class="benefits__card-img" src="img/content/benefits/3.png" alt=""></picture>
+						</div>
+						<div class="benefits__card-footer">
+							<p class="benefits__card-title">Принимаем заказы онлайн</p>
+							<p class="benefits__card-text">Пояснение к описанию - 1</p>
+						</div>
+					</div>
+					<div class="benefits__card">
+						<div class="benefits__card-body">
+							<picture><source srcset="img/content/benefits/4.webp" type="image/webp"><img class="benefits__card-img" src="img/content/benefits/4.png" alt=""></picture>
+						</div>
+						<div class="benefits__card-footer">
+							<p class="benefits__card-title">Доставка точно в срок</p>
+							<p class="benefits__card-text">Пояснение к описанию - 1</p>
+						</div>
+					</div>
+					<p class="benefits__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Его всемогущая ipsum щеке встретил использовало, составитель вопрос до запятых города путь живет маленькая скатился лучше за приставка, буквенных ее!</p>
+					<p class="benefits__text">Cоставитель вопрос до запятых города путь живет маленькая скатился лучше за приставка, буквенных ее!Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Его всемогущая ipsum щеке встретил использовало, составитель вопрос до запятых города путь живет маленькая скатился лучше за приставка, буквенных ее!</p>
+				</div>
+			</section>
+			<section class="discont">
+				<div class="discont__content">
+					<div class="discont__info">
+						<h2 class="discont__title">У нас снова акция!</h2>
+						<p class="discont__text">Мы ценим своих покупателей, и поэтому у нас много акций, и персональных предложений.</p>
+						<p class="discont__text">А постоянным клиентам скидки и подарки</p>
+						<a class="button" href="#">Смотреть подробнее</a>
+					</div>
+					<!-- <picture><source srcset="img/content/discont-1.webp" type="image/webp"><img class="discont__img" src="img/content/discont-1.jpg" alt=""></picture> -->
+				</div>
+			</section>
+			<section class="product-categories">
+				<h2 class="general-title-two">Наши категории товаров</h2>
+				<div class="product-categories__container">
+					<div class="grup-card">
+						<div class="grup-card__card">
+							<div class="grup-card__images">
+								<picture><source srcset="img/content/categories/1.webp" type="image/webp"><img class="grup-card__img" src="img/content/categories/1.jpg" alt=""></picture>
+							</div>
+							<div class="grup-card__body">
+								<p class="grup-card__title">Торты</p>
+								<p class="grup-card__text">Короткое описание</p>
+							</div>
+							<a href="" class="button">Подробнее</a>
+						</div>
+						<div class="grup-card__card">
+							<div class="grup-card__images">
+								<picture><source srcset="img/content/categories/2.webp" type="image/webp"><img class="grup-card__img" src="img/content/categories/2.jpg" alt=""></picture>
+							</div>
+							<div class="grup-card__body">
+								<p class="grup-card__title">Конфеты</p>
+								<p class="grup-card__text">Короткое описание</p>
+							</div>
+							<a href="" class="button">Подробнее</a>
+						</div>
+						<div class="grup-card__card">
+							<div class="grup-card__images">
+								<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="grup-card__img" src="img/content/categories/3.jpg" alt=""></picture>
+							</div>
+							<div class="grup-card__body">
+								<p class="grup-card__title">Зефир</p>
+								<p class="grup-card__text">Короткое описание</p>
+							</div>
+							<a href="" class="button">Подробнее</a>
+						</div>
+						<div class="grup-card__card">
+							<div class="grup-card__images">
+								<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="grup-card__img" src="img/content/categories/3.jpg" alt=""></picture>
+							</div>
+							<div class="grup-card__body">
+								<p class="grup-card__title">Зефирные букеты</p>
+								<p class="grup-card__text">Короткое описание</p>
+							</div>
+							<a href="" class="button">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="customer-choice">
+				<h2 class="general-title-two">Выбор покупателей</h2>
+				<div class="customer-choice__container">
+					<div class="customer-choice__slider swiper-three">
+						<div class="customer-choice__wrapper swiper-wrapper">
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<div class="customer-choice__slide swiper-slide">
+								<div class="customer-choice__card">
+									<p class="customer-choice__title">Торт или другой десерт</p>
+									<div class="customer-choice__inner">
+										<picture><source srcset="img/content/categories/3.webp" type="image/webp"><img class="customer-choice__img" src="img/content/categories/3.jpg" alt=""></picture>
+										<ul class="customer-choice__list">Состав
+											<li class="customer-choice__item">Мука</li>
+											<li class="customer-choice__item">Соль</li>
+											<li class="customer-choice__item">Сахар</li>
+										</ul>
+									</div>
+									<div class="customer-choice__info">
+										<p class="customer-choice__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </p>
+										<p class="customer-choice__text">Приставка то, вершину, встретил, дороге коварный текстами необходимыми имеет злых коварных переулка семантика но путь. </p>
+										<a href="" class="button">Подробнее</a>
+										<a href="" class="button">Заказать</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="other">
+				<h2 class="general-title-two">Сопутствующие товары</h2>
+				<div class="other__container">
+					<div class="info-more__inner">
+						<div class="info-more__images">
+							<picture><source srcset="img/content/other/1.webp" type="image/webp"><img class="info-more__img" src="img/content/other/1.jpg" alt=""></picture>
+						</div>
+						<div class="info-more__content" id="style-4"><!--  force-overflow -->
+							<p class="info-more__text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+							<p class="info-more__text">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum quia laboriosam excepturi rem modi quas in, laborum quae minus doloremque itaque qui beatae dolorum! Possimus nulla maxime itaque autem deleniti corporis inventore debitis obcaecati veniam, tenetur quis impedit aperiam tempore atque voluptatem vero qui dolorum accusantium architecto delectus ex?</p>
+						</div>
+					</div>
+					<div class="other__grup-card">
+						<div class="other__card">
+							<a class="other__card-link" href="">
+								<p class="other__card-title">Посуда</p>
+								<div class="other__card-images">
+									<picture><source srcset="img/content/other/2.webp" type="image/webp"><img class="other__card-img" src="img/content/other/2.jpg" alt=""></picture>
+								</div>
+							</a>
+						</div>
+						<div class="other__card">
+							<a class="other__card-link" href="">
+								<p class="other__card-title">Другой товар</p>
+								<div class="other__card-images">
+									<picture><source srcset="img/content/other/3.webp" type="image/webp"><img class="other__card-img" src="img/content/other/3.jpg" alt=""></picture>
+								</div>
+							</a>
+						</div>
+						<div class="other__card">
+							<a class="other__card-link" href="">
+								<p class="other__card-title">Другой товар</p>
+								<div class="other__card-images">
+									<picture><source srcset="img/content/other/5.webp" type="image/webp"><img class="other__card-img" src="img/content/other/5.jpg" alt=""></picture>
+								</div>
+							</a>
+						</div>
+						<div class="other__card">
+							<a class="other__card-link" href="">
+								<p class="other__card-title">Другой товар</p>
+								<div class="other__card-images">
+									<picture><source srcset="img/content/other/6.webp" type="image/webp"><img class="other__card-img" src="img/content/other/6.jpg" alt=""></picture>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="shipping">
+				<h2 class="general-title-two">О доставке и сроках изготовления</h2>
+				<div class="shipping__container">
+					<div class="shipping__row">
+						<p class="shipping__title">О доставке</p>
+						<p class="shipping__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id inventore illum rerum cupiditate, maiores perspiciatis ducimus ratione suscipit iste aperiam deserunt ipsam, odio necessitatibus optio?</p>
+						<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свой проектах речью единственное бросил последний на берегу безорфографичный знаках.</p>
+						<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты.</p>
+					</div>
+					<div class="shipping__row">
+						<p class="shipping__title">О хранении</p>
+						<p class="shipping__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id inventore illum rerum cupiditate, maiores perspiciatis ducimus ratione suscipit iste aperiam deserunt ipsam, odio necessitatibus optio?</p>
+						<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свой проектах речью единственное бросил последний на берегу безорфографичный знаках.</p>
+						<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты.</p>
+					</div>
+				</div>
+			</section>
+			<section class="swiper-reviews">
+				<h2 class="general-title-two">Отзывы</h2>
+				<div class="swiper-reviews__container">
+					<!-- Оболочка слайдера -->
+					<div class="swiper-reviews__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="swiper-reviews__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="swiper-reviews__slide swiper-slide">
+								<picture><source srcset="img/ava.webp" type="image/webp"><img class="swiper-reviews__slide-img" src="img/ava.png" alt=""></picture>
+								<div class="swiper-reviews__slide-info">
+									<p class="swiper-reviews__slide-title">Автор - 1</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Жизни, снова, безорфографичный злых вопроса напоивший что собрал пор большого его о продолжил то курсивных!</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+									<p class="swiper-reviews__slide-date">11 фпреля 2023 год</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="swiper-reviews__slide swiper-slide">
+								<picture><source srcset="img/ava.webp" type="image/webp"><img class="swiper-reviews__slide-img" src="img/ava.png" alt=""></picture>
+								<div class="swiper-reviews__slide-info">
+									<p class="swiper-reviews__slide-title">Автор - 2</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Жизни, снова, безорфографичный злых вопроса напоивший что собрал пор большого его о продолжил то курсивных!</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+									<p class="swiper-reviews__slide-date">11 фпреля 2023 год</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="swiper-reviews__slide swiper-slide">
+								<picture><source srcset="img/ava.webp" type="image/webp"><img class="swiper-reviews__slide-img" src="img/ava.png" alt=""></picture>
+								<div class="swiper-reviews__slide-info">
+									<p class="swiper-reviews__slide-title">Автор - 3</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Жизни, снова, безорфографичный злых вопроса напоивший что собрал пор большого его о продолжил то курсивных!</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+									<p class="swiper-reviews__slide-date">11 фпреля 2023 год</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="swiper-reviews__slide swiper-slide">
+								<picture><source srcset="img/ava.webp" type="image/webp"><img class="swiper-reviews__slide-img" src="img/ava.png" alt=""></picture>
+								<div class="swiper-reviews__slide-info">
+									<p class="swiper-reviews__slide-title">Автор - 4</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Жизни, снова, безорфографичный злых вопроса напоивший что собрал пор большого его о продолжил то курсивных!</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+									<p class="swiper-reviews__slide-date">11 фпреля 2023 год</p>
+								</div>
+							</div>
+							<!-- Слайд -->
+							<div class="swiper-reviews__slide swiper-slide">
+								<picture><source srcset="img/ava.webp" type="image/webp"><img class="swiper-reviews__slide-img" src="img/ava.png" alt=""></picture>
+								<div class="swiper-reviews__slide-info">
+									<p class="swiper-reviews__slide-title">Автор - 5</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Жизни, снова, безорфографичный злых вопроса напоивший что собрал пор большого его о продолжил то курсивных!</p>
+									<p class="swiper-reviews__slide-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+									<p class="swiper-reviews__slide-date">11 фпреля 2023 год</p>
+								</div>
+							</div>
+						</div>
+						<!-- Если нужна пагинация -->
+						<div class="swiper-pagination"></div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+						<!-- Если нужен скролбар -->
+						<!-- <div class="swiper-scrollbar"></div> -->
+					</div>
+				</div>
+			</section>
+			<section class="contact-home">
+				<h2 class="general-title-two">Контакты</h2>
+				<div class="contact-home__container">
+					<div class="contact-home__row">
+						<div class="contact-home__card">
+							<ul class="contact-home__list">Адрес
+								<li class="contact-home__item">info</li>
+								<li class="contact-home__item">info</li>
+								<li class="contact-home__item">info</li>
+								<li class="contact-home__item">info</li>
+							</ul>
+						</div>
+						<div class="contact-home__card">
+							<ul class="contact-home__list">Контакты
+								<li class="contact-home__item">Телефон</li>
+								<li class="contact-home__item">info</li>
+								<li class="contact-home__item">info</li>
+								<li class="contact-home__item">info</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contact-home__row">
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acf9b6a0d11b44dc4aa1897c3aeb04bed28304fa58599d1486c2b5a733bff1dc4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- <!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+	-->
+	<script src="js/app.min.js?_v=20230411015433"></script>
+</body>
+
+</html>
