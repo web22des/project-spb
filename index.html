@@ -98,7 +98,7 @@
 		width: 100%;
 		display: inline-block;
 		border-radius: 10px;
-
+		line-height: 120%;
 	}
 
 	.rootpage__link:hover {
@@ -125,18 +125,21 @@
 
 	.rootpage__inner {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
 	.rootpage__column {
 		background-color: ;
-		width: 25%;
-		min-height: 500px;
+		width: 35%;
+		min-height: 300px;
 		background-color: rgba(0, 0, 0, 0.295);
 		padding: 20px 30px 15px 30px;
+		margin-bottom: 30px;
 		border-radius: 15px;
 		/* cursor: pointer; */
 		transition: all .7s;
+
 	}
 
 	.rootpage__column:hover {
@@ -162,7 +165,8 @@
 		margin: 0;
 		font-weight: 900;
 		font-size: 50px;
-
+		text-align: center;
+		line-height: 120%;
 	}
 
 	/* ==== */
@@ -182,6 +186,52 @@
 	}
 
 	/* ==== */
+	@media (max-width: 992px) {
+		.header__text {
+			margin: 0;
+			font-weight: 900;
+			font-size: 30px;
+		}
+
+		.rootpage__column {
+			width: 40%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.rootpage__column {
+			width: 48%;
+		}
+
+		.rootpage__info {
+			text-align: center;
+			font-size: 30px;
+			margin-bottom: 40px;
+		}
+	}
+
+	@media (max-width: 650px) {
+		.rootpage__column {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 340px) {
+		.rootpage__title {
+			text-align: center;
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
+
+		.rootpage__link {
+			font-size: 18px;
+			letter-spacing: 2px;
+		}
+
+		.rootpage__column {
+			padding: 20px 10px 15px 10px;
+		}
+	}
 </style>
 
 </html>
