@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Торты</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230418115810">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- https://youtu.be/zs1r8yafTE8 -->
+		<!-- Адаптивное меню бургер с выпадающим подменю, а так же при помощи JS выбирает режим отбражения PC или Mobile -->
+		<!-- Так же навигация "Раздел-1" "Раздел-2" "Раздел-3" - это навигация по странице с плавным скроллом -->
+		<!-- Посмотреть пример на codePen https://codepen.io/web22des/pen/ZEMJNrB -->
+		<!-- Не работает с основными функциями шаблона ( функция flsFunctions.addTouchClass(); - должна быть выключена) -->
+		<!-- Также в основную страницу (home.html) в блоки, на которые привязана навигация нужно указать классы, закоментированный пример HTML-разметки внизу -->
+		<!-- Подключить стили -->
+		<!-- файл _header-burger.htm подключить в HTML файл home.html  @include('html/my-html/_header-burger.htm',{})  -->
+		<!-- файл header-burger.scss раскоментировать в файле общих стилей common.scss -->
+		<!-- файл header-burger.js раскоментировать в файле скриптов script.js -->
+
+		<header class="header">
+			<div class="contact__container">
+				<div class="contact__inner">
+					<a class="header__logo" href=""><picture><source srcset="img/logo.webp" type="image/webp"><img class="header__logo-img" src="img/logo.png" alt=""></picture></a>
+					<!-- <img class="contact__phone-img" src="img/Icons/fhone.svg" alt=""> -->
+					<div class="contact__phone-inner">
+						<a class="contact__phone" href="tel:+79998887766">+7(999)888-77-66</a>
+					</div>
+
+					<ul class="contact__list">
+						<li class="contact__item"><a class="contact__link" href=""><img class="contact__icon contact__icon--vk" src="img/Icons/tg.svg" alt=""></a></li>
+						<li class="contact__item"><a class="contact__link" href=""><img class="contact__icon contact__icon--tg" src="img/Icons/vk.svg" alt=""></a></li>
+						<li class="contact__item"><a class="contact__link" href=""><img class="contact__icon contact__icon--wts" src="img/Icons/whatsapp.svg" alt=""></a></li>
+
+					</ul>
+
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+			<div class="header__container">
+				<div class="header__menu menu">
+					<!-- <button type="button" class="menu__icon icon-menu"><span></span></button> -->
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a data-goto=".page__section--1" href="home.html" class="menu__link">Главная</a></li>
+							<li><a data-goto=".page__section--2" href="cakes.html" class="menu__link">Торты</a></li>
+							<li><a data-goto=".page__section--2" href="#" class="menu__link">Категория-2</a></li>
+							<li><a data-goto=".page__section--2" href="#" class="menu__link">Категория-3</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">О нас</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">Доставка</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">Контакты</a></li>
+							<!-- 					<li><a href="#" class="menu__link">Страница-1</a>
+						<span class="menu__arrow"></span>
+						<ul class="menu__sub-list">
+							<li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+							<li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+							<li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="menu__link">Страница-2</a></li> -->
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- =============== -->
+		<!-- <style>
+	.page__section {height: 50vh; margin-top: 80px;}
+	.page__section--1 {background-color: #794f45;}
+	.page__section--2 {background-color: #77608d;}
+	.page__section--3 {background-color: #7A956B;}
+	.page__title {font-size: 30px; text-align: center;}
+</style>
+
+<div class="page__container">
+	<section class="page__section page__section--1">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+	<section class="page__section page__section--2">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+	<section class="page__section page__section--3">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+</div> -->
+		<!-- =============== -->
+
+
+
+
+
+
+		<main class="page">
+			<section class="top-header">
+				<div class="top-header__container">
+					<div class="top-header__info">
+						<h2 class="top-header__title">Побалуйте себя нашими вкусными тортами сегодня!</h2>
+						<p class="top-header__text">Наши торты — это идеальный способ отпраздновать любое событие: от дня рождения до свадьбы или просто побаловать себя чем-нибудь сладким.</p>
+						<p class="top-header__text">Сделанный только из самых свежих ингредиентов и запеченный до совершенства, каждый кусочек - это райское наслаждение, которое заставит вас хотеть большего.</p>
+					</div>
+				</div>
+			</section>
+			<div class="info-more bg-rew">
+				<div class="info-more__container">
+					<p class="info-more__title">Попробуйте лучшее из мира тортов</p>
+					<div class="info-more__inner">
+						<div class="info-more__images">
+							<picture><source srcset="img/content/cakes/2.webp" type="image/webp"><img class="info-more__img" src="img/content/cakes/2.png" alt=""></picture>
+						</div>
+						<div class="info-more__content" id="style-4"><!--  force-overflow -->
+							<p class="info-more__text">В нашей пекарне мы гордимся тем, что предлагаем широкий ассортимент вкуснейших тортов на любой вкус. От классических шоколадных и ванильных тортов до более уникальных вкусов, таких как морковный торт и торт «Красный бархат», в нашем ассортименте каждый найдет что-то для себя.</p>
+							<p class="info-more__text">Попробуйте один из наших пикантных тортов, например, торт из кукурузного хлеба или пикантный бисквитный торт. Наши торты готовятся только из самых свежих ингредиентов и выпекаются до совершенства, превращая каждый кусочек в райское наслаждение!</p>
+							<p class="info-more__text">Закажите сегодня и почувствуйте разницу сами. Получите свой кусочек счастья прямо сейчас!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="all-cakes">
+				<div class="all-cakes__container">
+					<h2 class="general-title-two">Бисквитные торты</h2>
+					<div class="cakes-grup-card">
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/3.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/3.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Женауз</p>
+								<p class="cakes-grup-card__text">Этот бисквит легкий и воздушный, его готовят путем взбивания яиц и сахара до образования устойчивой пены, а затем добавляют муку и растопленное масло.</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/4.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/4.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Шифоновый торт</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/5.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/5.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Фундучный Дакауз</p>
+								<p class="cakes-grup-card__text">Его можно назвать бисквитом только по составу. Он не обладает ни привычной пышной структурой, ни пористым тестом с ванильным ароматом, а наоборот вы его узнаете по плотному сладковатому, ореховому вкусу. </p>
+								<p class="cakes-grup-card__text">Но он не сухой и не тугой. Для основы этого десерта берут миндальную муку, благодаря чему на выходе получается невысокая, но невероятно воздушная меренга. Это один из трех основных видов французских бисквитов. Его также часто готовят на основе фундука или фисташек. </p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/6.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/6.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Джоконд</p>
+								<p class="cakes-grup-card__text">Французский бисквит. Его готовят с добавлением сливочного масла или без, но всегда смешивают пшеничную муку с ореховой 1:1. Классическая Джоконда, как и предыдущий бисквит – это тесто с добавлением миндаля. Сахарная пудра и яйца -так же его составляющие.</p>
+								<p class="cakes-grup-card__text">Любителям орешков и всяких ореховых паст Джоконд точно придется по вкусу, так как изысканный миндальный аромат и вкус- фишка этого произведения!</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/7.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/7.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Ангельский</p>
+								<p class="cakes-grup-card__text">Этот вид бисквита пришел к нам из американской кухни. Логика названия утверждает, что белый цвет среза напоминает цвет крыльев ангела. По текстуре это очень мягкий и пористый бисквит с нежной, карамельной корочкой. Цвет и текстура бисквита достигается благодаря тому, что в нем используются только яичные белки (вообще без желтков).</p>
+								<p class="cakes-grup-card__text"></p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="all-cakes-two">
+				<div class="all-cakes-two__container">
+					<h2 class="general-title-two">Муссовые торты</h2>
+					<div class="cakes-grup-card">
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/3.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/3.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Женауз</p>
+								<p class="cakes-grup-card__text">Этот бисквит легкий и воздушный, его готовят путем взбивания яиц и сахара до образования устойчивой пены, а затем добавляют муку и растопленное масло.</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/4.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/4.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Шифоновый торт</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/5.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/5.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Фундучный Дакауз</p>
+								<p class="cakes-grup-card__text">Его можно назвать бисквитом только по составу. Он не обладает ни привычной пышной структурой, ни пористым тестом с ванильным ароматом, а наоборот вы его узнаете по плотному сладковатому, ореховому вкусу. </p>
+								<p class="cakes-grup-card__text">Но он не сухой и не тугой. Для основы этого десерта берут миндальную муку, благодаря чему на выходе получается невысокая, но невероятно воздушная меренга. Это один из трех основных видов французских бисквитов. Его также часто готовят на основе фундука или фисташек. </p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="all-cakes">
+				<div class="all-cakes__container">
+					<h2 class="general-title-two">Медовые торты</h2>
+					<div class="cakes-grup-card">
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/3.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/3.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Женауз</p>
+								<p class="cakes-grup-card__text">Этот бисквит легкий и воздушный, его готовят путем взбивания яиц и сахара до образования устойчивой пены, а затем добавляют муку и растопленное масло.</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/4.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/4.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Шифоновый торт</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+								<p class="cakes-grup-card__text">Шифоновый бисквит: этот бисквит готовится с использованием растительного масла вместо сливочного, в результате чего получается влажная и нежная текстура. В нем также используются взбитые яичные белки для придания легкой и воздушной текстуры.</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/5.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/5.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Фундучный Дакауз</p>
+								<p class="cakes-grup-card__text">Его можно назвать бисквитом только по составу. Он не обладает ни привычной пышной структурой, ни пористым тестом с ванильным ароматом, а наоборот вы его узнаете по плотному сладковатому, ореховому вкусу. </p>
+								<p class="cakes-grup-card__text">Но он не сухой и не тугой. Для основы этого десерта берут миндальную муку, благодаря чему на выходе получается невысокая, но невероятно воздушная меренга. Это один из трех основных видов французских бисквитов. Его также часто готовят на основе фундука или фисташек. </p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/6.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/6.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Джоконд</p>
+								<p class="cakes-grup-card__text">Французский бисквит. Его готовят с добавлением сливочного масла или без, но всегда смешивают пшеничную муку с ореховой 1:1. Классическая Джоконда, как и предыдущий бисквит – это тесто с добавлением миндаля. Сахарная пудра и яйца -так же его составляющие.</p>
+								<p class="cakes-grup-card__text">Любителям орешков и всяких ореховых паст Джоконд точно придется по вкусу, так как изысканный миндальный аромат и вкус- фишка этого произведения!</p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+						<div class="cakes-grup-card__card">
+							<div class="cakes-grup-card__body" id="style-4">
+								<div class="cakes-grup-card__images">
+									<picture><source srcset="img/content/cakes/7.webp" type="image/webp"><img class="cakes-grup-card__img" src="img/content/cakes/7.jpg" alt=""></picture>
+								</div>
+								<p class="general-card-title">Ангельский</p>
+								<p class="cakes-grup-card__text">Этот вид бисквита пришел к нам из американской кухни. Логика названия утверждает, что белый цвет среза напоминает цвет крыльев ангела. По текстуре это очень мягкий и пористый бисквит с нежной, карамельной корочкой. Цвет и текстура бисквита достигается благодаря тому, что в нем используются только яичные белки (вообще без желтков).</p>
+								<p class="cakes-grup-card__text"></p>
+							</div>
+							<a href="" class="button">Заказать</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="popular-cakes bg-rew">
+				<!-- <div class="popular-cakes__container"> -->
+				<div class="slider-product-gen">
+					<p class="general-title-two">Популярные торты</p>
+					<div class="slider-product__container">
+						<!-- Оболочка слайдера -->
+						<div class="slider-product__slider swiper sw2">
+							<!-- Двигающееся часть слайдера -->
+							<div class="slider-product__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="slider-product__slide swiper-slide">
+									<a class="slider-product__link" href="">
+										<div class="slider-product__inner">
+											<h2 class="slider-product__title">Эксклюзивный товар - 1</h2>
+											<picture><source srcset="img/content/slider-home/1.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/1.jpg" alt=""></picture>
+										</div>
+									</a>
+								</div>
+								<!-- Слайд -->
+								<div class="slider-product__slide swiper-slide">
+									<a class="slider-product__link" href="">
+										<div class="slider-product__inner">
+											<h2 class="slider-product__title">Эксклюзивный товар - 2</h2>
+											<picture><source srcset="img/content/slider-home/2.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/2.jpg" alt=""></picture>
+										</div>
+									</a>
+								</div>
+								<!-- Слайд -->
+								<div class="slider-product__slide swiper-slide">
+									<a class="slider-product__link" href="">
+										<div class="slider-product__inner">
+											<h2 class="slider-product__title">Эксклюзивный товар - 3</h2>
+											<picture><source srcset="img/content/slider-home/3.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/3.jpg" alt=""></picture>
+										</div>
+									</a>
+								</div>
+								<!-- Слайд -->
+								<div class="slider-product__slide swiper-slide">
+									<a class="slider-product__link" href="">
+										<div class="slider-product__inner">
+											<h2 class="slider-product__title">Эксклюзивный товар - 4</h2>
+											<picture><source srcset="img/content/slider-home/4.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/4.jpg" alt=""></picture>
+										</div>
+									</a>
+								</div>
+								<!-- Слайд -->
+								<div class="slider-product__slide swiper-slide">
+									<a class="slider-product__link" href="">
+										<div class="slider-product__inner">
+											<h2 class="slider-product__title">Эксклюзивный товар - 5</h2>
+											<picture><source srcset="img/content/slider-home/5.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/5.jpg" alt=""></picture>
+										</div>
+									</a>
+								</div>
+								<!-- Слайд -->
+								<div class="slider-product__slide swiper-slide">
+									<a class="slider-product__link" href="">
+										<div class="slider-product__inner">
+											<h2 class="slider-product__title">Эксклюзивный товар - 6</h2>
+											<picture><source srcset="img/content/slider-home/6.webp" type="image/webp"><img class="slider-product__img" src="img/content/slider-home/6.jpg" alt=""></picture>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- Если нужна пагинация -->
+							<div class="swiper-pagination"></div>
+							<!-- Если нужна навигация (влево/вправо) -->
+							<!-- <button type="button" class="swiper-button-prev"></button>
+									<button type="button" class="swiper-button-next"></button> -->
+							<!-- Если нужен скролбар -->
+							<!-- <div class="swiper-scrollbar"></div> -->
+						</div>
+					</div>
+				</div>
+	</div>
+	</section>
+	<section class="shipping bg-one pb-7">
+		<h2 class="general-title-two">Как заказать и где забрать</h2>
+		<div class="shipping__container">
+			<div class="shipping__row">
+				<p class="shipping__title">Как заказать</p>
+				<p class="shipping__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id inventore illum rerum cupiditate, maiores perspiciatis ducimus ratione suscipit iste aperiam deserunt ipsam, odio necessitatibus optio?</p>
+				<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свой проектах речью единственное бросил последний на берегу безорфографичный знаках.</p>
+				<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты.</p>
+			</div>
+			<div class="shipping__row">
+				<p class="shipping__title">Доставим или заберите сами</p>
+				<p class="shipping__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id inventore illum rerum cupiditate, maiores perspiciatis ducimus ratione suscipit iste aperiam deserunt ipsam, odio necessitatibus optio?</p>
+				<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свой проектах речью единственное бросил последний на берегу безорфографичный знаках.</p>
+				<p class="shipping__text">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты.</p>
+			</div>
+		</div>
+	</section>
+	<section class="discont">
+		<div class="discont__content">
+			<div class="discont__info">
+				<h2 class="discont__title">Акция!</h2>
+				<p class="discont__text">При заказе на сумму от 2000 руб доставка в пределах города бесплатно.</p>
+				<p class="discont__text"></p>
+				<a class="button" href="#">Заказать</a>
+			</div>
+			<!-- <picture><source srcset="img/content/discont-1.webp" type="image/webp"><img class="discont__img" src="img/content/discont-1.jpg" alt=""></picture> -->
+		</div>
+	</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__container">
+		</div>
+	</footer>
+	</div>
+	<!-- @include('html/_popup.htm',{}) -->
+	<script src="js/app.min.js?_v=20230418115810"></script>
+</body>
+
+</html>
