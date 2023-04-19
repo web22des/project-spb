@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Infant:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic&display=swap);
+
 @charset "UTF-8";
 
 * {
@@ -22,7 +24,7 @@ body {
 body {
   color: #000;
   line-height: 1;
-  font-family: "";
+  font-family: "Cormorant Infant";
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -34,7 +36,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Cormorant Infant";
   font-size: inherit;
 }
 
@@ -309,6 +311,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .general-title-two {
+  font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
@@ -437,7 +440,7 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 25px;
+  padding: 10px 20px;
   background: -webkit-gradient(linear, left top, right top, from(rgb(119, 57, 6)), to(rgb(152, 105, 148)));
   background: -o-linear-gradient(left, rgb(119, 57, 6), rgb(152, 105, 148));
   background: linear-gradient(to right, rgb(119, 57, 6), rgb(152, 105, 148));
@@ -558,6 +561,7 @@ body {
           transform: translate(-50%, -50%);
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
   color: #fff;
 }
 
@@ -610,6 +614,7 @@ body {
 }
 
 .info-more__title {
+  font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
   color: #966891;
@@ -671,6 +676,7 @@ body {
 }
 
 .info-more__text {
+  font-weight: 600;
   line-height: 120%;
   padding-right: 10px;
   padding-bottom: 20px;
@@ -1310,11 +1316,14 @@ body {
   line-height: normal;
 }
 
-.no-webp .top-header{
-  background-image: url(../img/content/cakes/1.jpg); }
-
 .top-header {
   min-height: 500px;
+}
+
+.no-webp .top-header__cakes{
+  background-image: url(../img/content/cakes/1.jpg); }
+
+.top-header__cakes {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1454,6 +1463,117 @@ body {
 }
 
 /* ------------------------- */
+
+.no-webp .top-header__contacts{
+  background-image: url(../img/content/contacts/1.jpg); }
+
+.top-header__contacts {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* =============== */
+
+.contacts {
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(rgba(138, 126, 241, 0.4196078431)));
+  background: -o-linear-gradient(left, #ffffff, rgba(138, 126, 241, 0.4196078431));
+  background: linear-gradient(to right, #ffffff, rgba(138, 126, 241, 0.4196078431));
+  padding-bottom: 70px;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts__card {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(rgba(138, 126, 241, 0.4196078431)));
+  background: -o-linear-gradient(bottom, #ffffff, rgba(138, 126, 241, 0.4196078431));
+  background: linear-gradient(to top, #ffffff, rgba(138, 126, 241, 0.4196078431));
+  -webkit-box-shadow: 0px 10px 39px 10px rgba(106, 63, 60, 0.22);
+  box-shadow: 0px 10px 39px 10px rgba(106, 63, 60, 0.22);
+  width: 20%;
+  padding: 10px 10px 20px 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.contacts__text {
+  font-size: 20px;
+  padding-bottom: 17px;
+}
+
+/* ============== */
+
+.contacts-social__inner {
+  max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  margin: 40px auto 0;
+  border-radius: 35px;
+}
+
+.contacts-social__card {
+  -webkit-box-shadow: 0px 0px 12px 20px rgba(12, 93, 255, 0.2);
+  box-shadow: 0px 0px 12px 20px rgba(190, 184, 247, 0.4);
+  border-radius: 50%;
+}
+
+.contacts-social__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.contacts-social__img {
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.contacts-social__img:hover {
+  width: 50px;
+  height: 50px;
+}
+
+/* ========== */
+
+.contact-maps {
+  padding-bottom: 70px;
+}
 
 /**
  * Swiper 7.2.0
@@ -2400,7 +2520,7 @@ button.swiper-pagination-bullet {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(169, 174, 136, 0.9);
+    background-color: rgba(77, 37, 5, 0.7);
     padding: 100px 30px 30px 30px;
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
@@ -2536,6 +2656,10 @@ button.swiper-pagination-bullet {
   .cakes-grup-card__card {
     max-width: 100%;
   }
+
+  .contacts__card {
+    width: 47%;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -2619,6 +2743,10 @@ button.swiper-pagination-bullet {
   .other__card {
     width: 100%;
   }
+
+  .contacts__card {
+    width: 100%;
+  }
 }
 
 @media (any-hover: hover) {
@@ -2629,4 +2757,6 @@ button.swiper-pagination-bullet {
 
 .webp .discont__content{ background-image: url(../img/content/discont-1.webp); }
 
-.webp .top-header{ background-image: url(../img/content/cakes/1.webp); }
+.webp .top-header__cakes{ background-image: url(../img/content/cakes/1.webp); }
+
+.webp .top-header__contacts{ background-image: url(../img/content/contacts/1.webp); }
