@@ -3584,6 +3584,48 @@
             },
             on: {}
         });
+        if (document.querySelector(".swiper")) new core(".sw5", {
+            modules: [ Navigation, Pagination, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 5,
+            spaceBetween: 5,
+            autoHeight: false,
+            speed: 800,
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 3e3
+            },
+            pagination: {
+                el: ".swiper-pagination-about",
+                clickable: true
+            },
+            navigation: {
+                prevEl: ".about-swiper-button-prev",
+                nextEl: ".about-swiper-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                },
+                1268: {
+                    slidesPerView: 5,
+                    spaceBetween: 10
+                }
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
