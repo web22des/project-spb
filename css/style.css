@@ -456,6 +456,76 @@ body {
   width: 100%;
 }
 
+.spollers {
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+}
+
+.spollers__item {
+  font-size: 1.25rem;
+}
+
+.spollers__title {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  border: 1px solid #eee;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.3125rem;
+  position: relative;
+}
+
+._spoller-init .spollers__title {
+  cursor: pointer;
+}
+
+._spoller-init .spollers__title::before,
+._spoller-init .spollers__title::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background-color: #000;
+  height: 2px;
+  width: 15px;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+._spoller-init .spollers__title::before {
+  -webkit-transform: translate(-75%, -50%) rotate(40deg);
+      -ms-transform: translate(-75%, -50%) rotate(40deg);
+          transform: translate(-75%, -50%) rotate(40deg);
+}
+
+._spoller-init .spollers__title::after {
+  -webkit-transform: translate(0, -50%) rotate(-40deg);
+      -ms-transform: translate(0, -50%) rotate(-40deg);
+          transform: translate(0, -50%) rotate(-40deg);
+}
+
+._spoller-init .spollers__title._spoller-active::before {
+  -webkit-transform: translateX(-75%) rotate(-40deg);
+      -ms-transform: translateX(-75%) rotate(-40deg);
+          transform: translateX(-75%) rotate(-40deg);
+}
+
+._spoller-init .spollers__title._spoller-active::after {
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.spollers__body {
+  padding: 1.25rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #eee;
+}
+
 [data-fullscreen] {
   min-height: 100vh;
 }
@@ -604,9 +674,6 @@ body {
 
 .info-more {
   padding-top: 70px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(138, 126, 241, 0.4196078431)), to(#ffffff));
-  background: -o-linear-gradient(left, rgba(138, 126, 241, 0.4196078431), #ffffff);
-  background: linear-gradient(to right, rgba(138, 126, 241, 0.4196078431), #ffffff);
 }
 
 .info-more__container {
@@ -672,7 +739,7 @@ body {
 .info-more__content {
   width: 60%;
   max-height: 400px;
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .info-more__text {
@@ -1347,6 +1414,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 50px;
   line-height: 1.1818181818;
+  font-weight: bold;
 }
 
 @supports (font-size: clamp( 1.5625rem , 1.2215909091rem  +  1.7045454545vw , 2.5rem )) {
@@ -1572,6 +1640,86 @@ body {
 /* ========== */
 
 .contact-maps {
+  padding-bottom: 70px;
+}
+
+.no-webp .top-header__about{
+  background-image: url(../img/content/about/1.jpg); }
+
+.top-header__about {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ============== */
+
+.about-img {
+  /* 	position: absolute;
+  	top: 0;
+  	left: 0px;
+  	width: 320px;
+  	height: auto;
+  	transform: rotate(-49deg);
+  	z-index: -1;
+  	@media (max-width:$tablet){
+  		position: relative;
+  		height: auto;
+  		width: 100px;
+  		text-align: center;
+  	} */
+}
+
+/* ============== */
+
+.partners {
+  padding-bottom: 70px;
+}
+
+.partners__container {
+  padding-top: 30px;
+}
+
+.partners__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 330px;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.partners__images {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+
+.partners__img {
+  width: 100%;
+  height: auto;
+}
+
+.no-webp .top-header__shipping{
+  background-image: url(../img/content/shiping/1.jpg); }
+
+.top-header__shipping {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ======== */
+
+.question {
   padding-bottom: 70px;
 }
 
@@ -2760,3 +2908,7 @@ button.swiper-pagination-bullet {
 .webp .top-header__cakes{ background-image: url(../img/content/cakes/1.webp); }
 
 .webp .top-header__contacts{ background-image: url(../img/content/contacts/1.webp); }
+
+.webp .top-header__about{ background-image: url(../img/content/about/1.webp); }
+
+.webp .top-header__shipping{ background-image: url(../img/content/shiping/1.webp); }
